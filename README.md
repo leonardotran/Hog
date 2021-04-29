@@ -25,15 +25,23 @@ A player who chooses to roll zero dice scores the one more than the last digit o
 - Example 2: The opponent has 28 points, and the current player chooses to roll zero dice. 2 * 8 = 16; the last digit is a 6, so the current player gains 6 + 1 = 7 points.
 - Example 3: The opponent has 5 points, and the current player chooses to roll zero dice. 0 * 5 = 0; the last digit is a 0, so the current player gains 0 + 1 = 1 point.
 
-# Swine Swap. 
-After points for the turn are added to the current player's score, if the ones digit of the current player's score is the same as the tens digit of the opponent's score, the two scores are swapped.
+# Swine Align. 
+Swine Align. After points for the turn are added to the current player's score, if both players have a positive score and the Greatest Common Divisor (GCD) of the current player's score and the opponent's score is at least 10, take another turn.
 
-- Example 1: The current player has a total score of 41 and the opponent has 92. The current player rolls two dice that total 8. The player's new score is 49, and the opponent's score is 92. The ones and tens digits are the same (49 and 92), so the scores are swapped! The current player now has 92 points and the opponent has 49. The turn ends.
-- Example 2: The current player has a total score of 34 and the opponent has 5. The current player rolls three dice that total 6. The player's new score is 40, and the ones digit is the same as the opponent's tens digit (40 and 05), so the scores are swapped. The current player now has 5 points and the opponent has 40.
-- Example 3: The current player has a total score of 91 and the opponent has 12. The current player rolls five dice that total 20. The player's new score is 111, and the ones digit is the same as the opponent's tens digit (111 and 12), so the scores are swapped. The opponent ends the turn with 111 points and wins the game.
+Example 1: At the end of the first player's turn, the players have scores of 8 and 36. The GCD of the scores is 4, so the first player does not take another turn due to swine align.
+
+Example 2: At the end of the first player's turn, the players have scores of 20 and 30. The GCD of the scores is 10, so the first player takes an extra turn.
+
+Example 3: At the end of the first player's turn, the players have scores of 24 and 36. The GCD of the scores is 12, so the first player takes an extra turn. The first player rolls a 12 and the scores are now 36 and 36. The GCD of the scores is 36, so the first player takes yet another turn.
+
+Example 4: At the end of the first player's turn, the players have scores of 15 and 0. Swine align only applies when both player scores are positive (not zero), so the first player does not take another turn due to swine align.
+
+### Pig Pass. 
+After points for the turn are added to the current player's score, if the current player's score is lower than the opponent's score and the difference between them is less than 3, the current player takes another turn.
 
 # How to start the GUI:
 ```
 python3 hog_gui.py
 ```
-(source: cs61a summer 2018)
+(source: cs61a fall 2020)
+cs61a.org
