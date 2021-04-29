@@ -1,6 +1,3 @@
-# How to run 
-In terminal, type: python3 hog_gui.py
- 
 # HOG
 Stimulation of hog
 <img width="1386" alt="Screen Shot 2021-04-29 at 4 45 40 PM" src="https://user-images.githubusercontent.com/60949882/116616226-72757700-a90a-11eb-8166-300b502d6a06.png">
